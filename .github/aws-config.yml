@@ -22,7 +22,7 @@ s3_bucket: qualifyze.com
 # AWS Cloud Formation Stack name #
 ##################################
 # NOTE: Defaults to "mystack" if left empty
-aws_stack_name: amplify-chemsquare-next-92937-StackName
+aws_stack_name: amplify-chemsquare-next-92937
 
 ####################
 # AWS SAM Template #
