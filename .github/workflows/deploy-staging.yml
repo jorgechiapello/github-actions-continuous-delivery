@@ -35,8 +35,9 @@ jobs:
           name: webpack artifacts
           path: public
 
-      - name: Deploy to AWS
-        uses: github/deploy-nodejs@master
-        env:
-          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
-          AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+      - uses: shallwefootball/s3-upload-action@master
+        with:
+          aws_key_id: ${{ secrets.AWS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
+          aws_bucket: chemsquare.com
+          source_dir: 'dirname'
